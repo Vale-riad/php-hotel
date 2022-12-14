@@ -70,34 +70,32 @@ foreach($hotels as $hotel){
   </ul>
 
   <table class="table">
+  <?php foreach($hotels as $key => $hotel){ ?>
   <thead>
     <tr>
-      <th scope="col"><?php echo $hotel["name"];?></th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+    <th scope="row">Nome Hotel:</th>
+      <th><?php echo $hotel["name"];?></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">Descrizione:</th>
+      <td><?php echo $hotel["description"];?></td>
     </tr>
     <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <th scope="row">Parking:</th>
+      <td><?php echo $hotel["parking"];?></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <th scope="row">Voto:</th>
+      <td><?php echo $hotel["vote"];?></td>
+    </tr>
+    <tr class="gx-3">
+      <th scope="row">Distanza dal centro:</th>
+      <td ><?php echo $hotel["distance_to_center"];?></td>
     </tr>
   </tbody>
+  <?php } ?>
 </table>
 </body>
 </html>
